@@ -3,5 +3,80 @@
         "username": "ductrung",
         "email": "ductrung@gmail.com",
         "password": "123456"
+    },
+    {
+        "username": "minhthu",
+        "email": "minhthu@gmail.com",
+        "password": "123456"
+    },
+    {
+        "username": "hoanganh",
+        "email": "hoanganh@gmail.com",
+        "password": "123456"
+    },
+    {
+        "username": "thanhdat",
+        "email": "thanhdat@gmail.com",
+        "password": "123456"
+    },
+    {
+        "username": "ngocthanh",
+        "email": "ngocthanh@gmail.com",
+        "password": "123456"
+    },
+    {
+        "username": "quanghuy",
+        "email": "quanghuy@gmail.com",
+        "password": "123456"
+    },
+    {
+        "username": "khanhlinh",
+        "email": "khanhlinh@gmail.com",
+        "password": "123456"
+    },
+    {
+        "username": "tienthanh",
+        "email": "tienthanh@gmail.com",
+        "password": "123456"
+    },
+    {
+        "username": "bichngoc",
+        "email": "bichngoc@gmail.com",
+        "password": "123456"
+    },
+    {
+        "username": "trungkien",
+        "email": "trungkien@gmail.com",
+        "password": "123456"
+    },
+    {
+        "username": "anhtuan",
+        "email": "anhtuan@gmail.com",
+        "password": "123456"
+    },
+    {
+        "username": "kimanh",
+        "email": "kimanh@gmail.com",
+        "password": "123456"
+    },
+    {
+        "username": "nhatminh",
+        "email": "nhatminh@gmail.com",
+        "password": "123456"
+    },
+    {
+        "username": "hoainam",
+        "email": "hoainam@gmail.com",
+        "password": "123456"
+    },
+    {
+        "username": "thanhtruc",
+        "email": "thanhtruc@gmail.com",
+        "password": "123456"
+    },
+    {
+        "username": "maianh",
+        "email": "maianh@gmail.com",
+        "password": "123456"
     }
 ]
