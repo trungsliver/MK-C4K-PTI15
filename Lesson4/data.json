@@ -133,5 +133,14 @@
         "club": "Tottenham Hotspur",
         "rating": 9.0,
         "worth": 70000000.0
+    },
+    {
+        "id": 16,
+        "name": "Ngoc Huy",
+        "dob": "28/01/2010",
+        "region": "Vietnam",
+        "club": "Roblox",
+        "rating": 1.0,
+        "worth": 1
     }
 ]
