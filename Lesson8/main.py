@@ -91,7 +91,7 @@ class MainWindow(QMainWindow):
         # Thêm phần tử vào danh sách / file data
         if username != '':
             for user in dtb.users_list:
-                if user.email == username:
+                if username in user.email:
                     search_list.append(f'{user.email} - {user.password}')
                     check =  True
         else:
