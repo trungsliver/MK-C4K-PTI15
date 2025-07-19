@@ -15,9 +15,11 @@ dtb.convert_to_object()
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('lesson7.ui', self)
+        uic.loadUi('lesson8.ui', self)
+        # Lấy accout từ file json
+        accounts = dtb.get_acc()
         # Thêm danh sách để hiển thị trên listWidget
-        self.listWidget.addItems(arr)
+        self.listWidget.addItems(accounts)
         # Khai báo sự kiện ấn các nút
         self.btn_add.clicked.connect(self.add_item)
         self.btn_edit.clicked.connect(self.edit_item)
@@ -26,15 +28,20 @@ class MainWindow(QMainWindow):
 
     def add_item(self):
         # Lấy text ở lineEdit
-        text = self.lineEdit.text()
-        # Thêm phần tử vào danh sách
-        arr.append(str(text))
+        username = self.lineEdit_username.text().strip()
+        password = self.lineEdit_password.text().strip()
+        # Thêm phần tử vào danh sách / file data
+        if username != '' and password != '':
+            dtb.add_user(username, password)
+        else:
+            msg_box('Thêm thất bại', 'Nhập thiếu thông tin')
         # Xóa hết các phần tử trên widget
         self.listWidget.clear()
         # Thêm lại danh sách
-        self.listWidget.addItems(arr)
+        self.listWidget.addItems(dtb.get_acc())
         # Xóa dữ liệu ở lineEdit
-        self.lineEdit.setText('')
+        self.lineEdit_username.setText('')
+        self.lineEdit_password.setText('')
         
     def edit_item(self):
         # Lấy index dòng đang chọn trên list widget

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>790</width>
-    <height>577</height>
+    <width>788</width>
+    <height>572</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -62,12 +62,12 @@
       </font>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="lineEdit_username">
      <property name="geometry">
       <rect>
-       <x>180</x>
+       <x>80</x>
        <y>440</y>
-       <width>400</width>
+       <width>311</width>
        <height>35</height>
       </rect>
      </property>
@@ -76,6 +76,9 @@
        <family>Nunito Sans Normal</family>
        <pointsize>10</pointsize>
       </font>
+     </property>
+     <property name="placeholderText">
+      <string>username</string>
      </property>
     </widget>
     <widget class="QPushButton" name="btn_search">
@@ -208,6 +211,25 @@ QPushButton:hover{
      </property>
      <property name="text">
       <string>Delete</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_password">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>440</y>
+       <width>311</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Nunito Sans Normal</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="placeholderText">
+      <string>Password</string>
      </property>
     </widget>
    </widget>
