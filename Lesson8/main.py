@@ -11,7 +11,6 @@ dtb = oop.UserDatabase()
 # Chuyển dữ liệu từ json sang object
 dtb.convert_to_object()
 
-
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -42,62 +41,71 @@ class MainWindow(QMainWindow):
         # Xóa dữ liệu ở lineEdit
         self.lineEdit_username.setText('')
         self.lineEdit_password.setText('')
-        
+
     def edit_item(self):
         # Lấy index dòng đang chọn trên list widget
         cur = self.listWidget.currentRow()
         # Lấy text ở lineEdit
-        text = self.lineEdit.text()
-        # Thay thế phần tử tại index
-        if cur >= 0:
-            arr[cur] = str(text)
+        username = self.lineEdit_username.text().strip()
+        password = self.lineEdit_password.text().strip()
+        # Thêm phần tử vào danh sách / file data
+        if username != '' and password != '':
+            if cur >= 0:
+                dtb.users_list[cur] = oop.User(username, password)
+                dtb.convert_to_dict()
+            else:
+                msg_box('Lỗi', 'Chưa chọn đối tượng để sửa!')
         else:
-            msg_box('Lỗi', 'Chưa chọn đối tượng để sửa!')
+            msg_box('Thất bại', 'Nhập thiếu thông tin')
         # Xóa hết các phần tử trên widget
         self.listWidget.clear()
         # Thêm lại danh sách
-        self.listWidget.addItems(arr)
+        self.listWidget.addItems(dtb.get_acc())
         # Xóa dữ liệu ở lineEdit
-        self.lineEdit.setText('')
-        
+        self.lineEdit_username.setText('')
+        self.lineEdit_password.setText('')
+
     def delete_item(self):
         # Lấy index dòng đang chọn trên list widget
         cur = self.listWidget.currentRow()
-        # Lấy text ở lineEdit
-        text = self.lineEdit.text()
-        # Kiểm tra index và xóa
-        if 0 <= cur <= len(arr):
-            arr.pop(cur)
-            msg_box('Thành công','Đã xóa đối tượng khỏi danh sách')
+        if cur >= 0:
+            dtb.users_list.pop(cur)
+            dtb.convert_to_dict()
         else:
             msg_box('Lỗi', 'Chưa chọn đối tượng để xóa!')
         # Xóa hết các phần tử trên widget
         self.listWidget.clear()
         # Thêm lại danh sách
-        self.listWidget.addItems(arr)
+        self.listWidget.addItems(dtb.get_acc())
         # Xóa dữ liệu ở lineEdit
-        self.lineEdit.setText('')
+        self.lineEdit_username.setText('')
+        self.lineEdit_password.setText('')
 
     def search_item(self):
         cur = self.listWidget.currentRow()
-        insert_txt = self.lineEdit.text()
+        # Lấy text ở lineEdit
+        username = self.lineEdit_username.text().strip()
+        # Khai báo danh sách tìm kiếm
+        search_list = []
         check = False
-        check_list = []
-        for item in arr:
-            if insert_txt in item:
-                check = True
-                check_list.append(item)
-        
+        # Thêm phần tử vào danh sách / file data
+        if username != '':
+            for user in dtb.users_list:
+                if user.email == username:
+                    search_list.append(f'{user.email} - {user.password}')
+                    check =  True
+        else:
+            msg_box('Thất bại', 'Nhập thiếu thông tin')
         # Xóa hết các phần tử ở trên widget
         self.listWidget.clear()
         # add lại cả danh sách vào list widget
         if check == True:
-            msg_box('Thành công', f'Có {len(check_list)} kết quả!')
+            msg_box('Thành công', f'Có {len(search_list)} kết quả!')
         else:
-            check_list.append('item not found')
-        self.listWidget.addItems(check_list)
+            search_list.append('Không có kết quả')
+        self.listWidget.addItems(search_list)
         
-        
+
 def msg_box(title, content):
     msg = QtWidgets.QMessageBox()
     msg.setStyleSheet("QLabel{min-width: 200px;}"
