@@ -1,9 +1,15 @@
 Thứ tự thuyết trình
 
-1. Hoàng Nam
-2. Ngọc Huy
-3. Hiếu An
-4. Minh Ngọc
-5. Hoàng Bách
-6. Trường Giang
-7. Tiến Dũng
+1. Hoàng Nam: Máy tính cầm tay (thêm lịch sử)
+
+2. Ngọc Huy: Quản lý Chi tiêu cá nhân 
+
+3. Hiếu An: 
+
+4. Minh Ngọc: Marketplace Artist
+
+5. Hoàng Bách: Quizz
+
+6. Trường Giang: Netflix
+
+7. Tiến Dũng: Timer App

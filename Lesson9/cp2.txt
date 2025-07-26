@@ -1,0 +1,15 @@
+Quy tắc đặt tên folder: [Lop]_[HoTen]_CP2
+Ví dụ: PTI15_DucTrung_CP2
+
+Trong folder chứa các file (có thể viết ít file hơn): 
+    main.py
+    oop.py
+    data_io.py
+    data.json
+
+Đáp án trắc nghiệm có thể viết vào file main.py hoặc tự viết ra 1 file .txt
+
+Link đề bài: shorturl.at/tzwrt
+
+Hạn nộp: 15h15
+
