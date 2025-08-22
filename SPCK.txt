@@ -1,6 +1,6 @@
 Thứ tự thuyết trình
 
-1. Hoàng Nam: Máy tính cầm tay (thêm lịch sử)
+1. Hoàng Nam: Máy tính cầm tay (done)
 
 2. Đức Minh: Quản lý danh bạ (done)
 https://www.canva.com/design/DAGuLbi8R9g/7wQZn4njZrjejXPwDaorig/edit
@@ -11,7 +11,7 @@ https://www.canva.com/design/DAGwNzxdbsA/evmMJBI8mFiS6PqLmdmUjQ/edit
 4. Hiếu An: App ghi chú (done)
 https://www.canva.com/design/DAGwN8pVfjY/W3gjdGXqqrqRDdvt9IFR2A/edit
 
-5. Minh Ngọc: Marketplace Artist
+5. Minh Ngọc: Marketplace Artist (done)
 https://www.canva.com/design/DAGwN6rJM-g/QfxhdFcZueE-0Gs3RNIwpw/edit
 
 6. Hoàng Bách: Quizz (done)
